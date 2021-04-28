@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.loginContainer {
+  margin: auto;
+  min-width: 800px;
+  padding: 0 20px;
+  background-image: linear-gradient(
+    to bottom,
+    #f20505,
+    #e80409,
+    #df030d,
+    #d5030f,
+    #cc0311,
+    #bd0112,
+    #ad0013,
+    #9e0013,
+    #850012,
+    #6d000f,
+    #560009,
+    #400101
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginHeader {
+  font-family: "Unica One", cursive;
+  margin-bottom: 5px;
+}

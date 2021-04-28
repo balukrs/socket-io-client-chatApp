@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+.roomSpace {
+  background-color: rgb(56, 56, 56);
+  color: rgb(211, 208, 208);
+  font-family: "Roboto", sans-serif;
+  height: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.chatSpace {
+  background-color: #e9e6d5;
+  height: 79%;
+  padding: 14px;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.chatSpace::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chatSpace::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.chatSpace::-webkit-scrollbar-thumb {
+  background-color: #979793;
+  outline: 1px solid rgb(13, 13, 14);
+}
+
+.sendButton {
+  width: 15%;
+  height: 55px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(211, 209, 209);
+}
+
+/* Messages */
+.adminMsg {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.sendMsg {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  position: relative;
+  animation-name: sendanime;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.receiveMsg {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  position: relative;
+  position: relative;
+  animation-name: receiveanime;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.innerMsg {
+  display: grid;
+  grid-gap: 4px;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 1px 4px 9px 0px rgba(0, 0, 0, 0.75);
+}
+.green {
+  background-color: #128c7e;
+}
+.grey {
+  background-color: rgb(56, 56, 56);
+}
+.innerHead {
+  font-size: 12px;
+  font-weight: 500;
+  color: #94c9c2;
+  justify-self: start;
+}
+.innerText {
+  font-weight: 600;
+  color: #dddcd7;
+  max-width: 200px;
+}
+.innerTime {
+  font-size: 11px;
+  justify-self: end;
+  color: white;
+}
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid #128c7e;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  transform: translate(7.2px, -0.06px);
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid rgb(56, 56, 56);
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transform: translate(-7.2px, 0.06px);
+}
+
+@keyframes sendanime {
+  from {
+    opacity: 0;
+    transform: translate(55px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0);
+  }
+}
+
+@keyframes receiveanime {
+  from {
+    opacity: 0;
+    transform: translate(55px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0);
+  }
+}
