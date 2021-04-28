@@ -56,7 +56,8 @@ const Login = () => {
 
   useEffect(() => {
     socketRef.current = io.connect(
-      "https://chatapp-socketio-backend.herokuapp.com/"
+      "https://chatapp-socketio-backend.herokuapp.com/",
+      { transport: ["websocket"] }
     );
 
     socketRef.current.on("checkuser", (obj) => {
