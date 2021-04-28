@@ -56,7 +56,7 @@ const Login = () => {
 
   useEffect(() => {
     socketRef.current = io.connect(
-      "https://chatapp-socketio-backend.herokuapp.com/",
+      "https://chatapp-socketio-backend.herokuapp.com",
       {
         withCredentials: true,
       }
